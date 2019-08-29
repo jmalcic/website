@@ -1,0 +1,20 @@
+<footer class="px-3 px-md-4 my-2">
+  <div class="container-md">
+    <div class="my-4 gutter-sm-condensed gutter-md-spacious clearfix">
+      <div class="col-12 col-sm-6 float-left">
+        <h2>{{ site.title | escape }}</h2>
+        <p>{{ site.description | escape }}</p>
+      </div>
+      <div class="col-12 col-sm-6 float-left">
+        <ul class="list-style-none">
+          {% if site.email %}
+            <li><a href="mailto:{{ site.email }}"><address>{{ site.email }}</address></a></li>
+          {% endif %}
+          {% if site.address %}
+            <li><address>{{ site.address }}</address></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

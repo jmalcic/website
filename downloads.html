@@ -1,0 +1,37 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: page
+title: Downloads
+---
+
+<h1 class="my-4">Downloads</h1>
+<ul class="list-style-none">
+  {% for download in site.data.downloads %}
+    <li class="py-4 border-bottom border-gray-light d-flex flex-column flex-sm-row">
+      <h3 class="flex-auto pr-sm-2 pb-2 pb-sm-0">{{ download.name }}</h3>
+      <details class="details-overlay">
+        <summary class="btn btn-outline">
+          Downloads
+          <span class="Counter">{{ download.files | size }}</span>
+        </summary>
+        <div class="position-absolute Box list-style-none" style="z-index: 100">
+          <ul>
+            {% for file in download.files %}
+              <li class="Box-row">
+                <span class="Label Label--outline d-inline">{{ file.type }}</span>
+                <a class="Box-row-link" href="assets/files/{{ download.name | slugify: 'latin' }}/{{ file.date }}/{{ file.type | slugify: 'latin' }}.pdf">
+                  <div class="d-inline">
+                    <time datetime="{{ file.date }}" class="d-inline">{{ file.date | date_to_long_string: 'ordinal' }}</time>
+                    <address class="d-inline">{{ file.address }}</address>
+                  </div>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </details>
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,31 @@
+{% assign default_paths = site.pages | map: "path" %}
+{% assign page_paths = site.header_pages | default: default_paths %}
+{% assign titles_size = site.pages | map: 'title' | join: '' | size %}
+
+{% if titles_size > 0 %}
+  <details class="d-md-none mt-3">
+    <summary class="btn btn-outline">Navigation</summary>
+    <nav class="d-flex flex-column flex-self-stretch mt-3">
+      <div class="d-block pb-2">
+        <a class="btn btn-outline" href="{% link /assets/files/cv.pdf %}">CV</a>
+      </div>
+      {% for path in page_paths %}
+        {% assign my_page = site.pages | where: "path", path | first %}
+        {% if my_page.title %}
+          <a class="d-block py-2 border-top border-black-fade" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </details>
+  <a class="d-none d-md-inline-flex btn btn-outline v-align-middle" href="{% link /assets/files/cv.pdf %}">CV</a>
+  <div class="d-none d-md-inline-flex flex-justify-end v-align-middle">
+    <nav class="flex-self-center flex-shrink-0">
+      {% for path in page_paths %}
+        {% assign my_page = site.pages | where: "path", path | first %}
+        {% if my_page.title %}
+          <a class="px-md-1 px-lg-2" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </div>
+{% endif %}
