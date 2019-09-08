@@ -20,7 +20,7 @@ title: Downloads
           <ul>
             {% for file in download.files %}
               <li class="Box-row">
-                <span class="Label Label--outline d-inline">{{ file.type }}</span>
+                <span class="Label Label--outline d-inline-block">{{ file.type }}</span>
                 <a class="Box-row-link" href="assets/files/{{ download.name | slugify: 'latin' }}/{{ file.date }}/{{ file.type | slugify: 'latin' }}.pdf">
                   <div class="d-inline">
                     <time datetime="{{ file.date }}" class="d-inline">{{ file.date | date_to_long_string: 'ordinal' }}</time>
