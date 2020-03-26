@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@primer/css@^12.6.2":
-  version "12.6.2"
-  resolved "https://registry.yarnpkg.com/@primer/css/-/css-12.6.2.tgz#2d9947e910d2f97c05231f5ba940919165067832"
-  integrity sha512-oysHWaq/dzu8bj6KF+30jnF8lao5XuecKl2RQKh+gTgojDfzIErmYAJQoJGvntH0tTrTr+9EfQd3O/fA3zPBPg==
+"@primer/css@^14.3.0":
+  version "14.3.0"
+  resolved "https://registry.yarnpkg.com/@primer/css/-/css-14.3.0.tgz#66d3e25a6c750e65d06234d1cf4e16a32567c611"
+  integrity sha512-n5/skNhsbCc+wStmH2nSFHWS8I1XFVtdSabG7IuCYbGELuxduw3x5kl9uYQwG558E5/4wQZ/WbAeACuTTjcWFA==
   dependencies:
     "@primer/octicons" "^9.1.1"
 
