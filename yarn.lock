@@ -2,13 +2,13 @@
 # yarn lockfile v1
 
 
-"@primer/css@^16.0.2":
-  version "16.0.2"
-  resolved "https://registry.yarnpkg.com/@primer/css/-/css-16.0.2.tgz#f59060f160bf284927c8452f1cc03374e5d89812"
-  integrity sha512-9QOrsWf31RiMnVWgkY7DA30pk6L6KKZJNoeU5CaxJQMPgf9IH48oTBpCAbFc1377x/DwA7pLxLIf+5tQbpdneQ==
+"@primer/css@^16.1.1":
+  version "16.1.1"
+  resolved "https://registry.yarnpkg.com/@primer/css/-/css-16.1.1.tgz#2a8b72fdbef1c4eb58f047603a3ead2fcf99c78d"
+  integrity sha512-hccIfwO8axja/DZirIEa46GDTt9hdL9Jqbz1vYwjycL2fZpm6Ywm8w9TUc7ZN2qVQTrVDNK1GrpYky3zPDa7aA==
   dependencies:
     "@primer/octicons" "^9.1.1"
-    "@primer/primitives" "^4.0.1"
+    "@primer/primitives" "4.1.0"
 
 "@primer/octicons@^9.1.1":
   version "9.1.1"
@@ -17,10 +17,10 @@
   dependencies:
     object-assign "^4.1.1"
 
-"@primer/primitives@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@primer/primitives/-/primitives-4.0.1.tgz#87dae25cc075dd1b38a06d5d91bdfd4b22ea1abf"
-  integrity sha512-TFbO/duRByLSGsCuDRo5Qgd+NOZmMKCB+au32ZHgGfn9KDdlGbbwvGKOx6c56jRWDCHk27aRL2bG4Hc9tFgHpA==
+"@primer/primitives@4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@primer/primitives/-/primitives-4.1.0.tgz#33d83b38e2021f294f446c41bca65f5d7ffd898a"
+  integrity sha512-bACUj3Xl2z5dnYKE/76BpNqN4/JXFngf26dbb7Goph2PU5wcf+Z2Kk3nXwtJPGG8JByO+FcU3gpZjLNoyuLMHQ==
 
 object-assign@^4.1.1:
   version "4.1.1"
