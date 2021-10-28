@@ -1,5 +1,15 @@
 ---
 layout: default
 ---
-
-{{ content }}
+{% assign profile_pic = site.static_files | where: "basename", page.profile_pic | first %}
+<main class="my-4 bg-yellow-400 dark:bg-yellow-700 text-black dark:text-white">
+  <div class="2xl:container mx-auto flex flex-col sm:flex-row gap-8 items-center justify-items-stretch">
+    <img class="bg-white dark:bg-black flex-1 self-stretch object-cover w-full sm:w-2/5" width="500" src="{{ profile_pic.path }}" />
+    <div class="flex-1 font-serif px-4 sm:px-0 py-8">
+      <div class="sm:pr-8 space-y-4">
+        <h1 class="text-7xl font-display italic">{{ page.headline }}</h1>
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</main>

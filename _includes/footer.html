@@ -1,20 +1,32 @@
-<footer class="px-3 px-md-4 my-2">
-  <div class="container-md">
-    <div class="my-4 gutter-sm-condensed gutter-md-spacious clearfix">
-      <div class="col-12 col-sm-6 float-left">
-        <h2>{{ site.title | escape }}</h2>
-        <p>{{ site.description | escape }}</p>
-      </div>
-      <div class="col-12 col-sm-6 float-left">
-        <ul class="list-style-none">
-          {% if site.email %}
-            <li><a href="mailto:{{ site.email }}"><address>{{ site.email }}</address></a></li>
-          {% endif %}
-          {% if site.address %}
-            <li><address>{{ site.address }}</address></li>
-          {% endif %}
-        </ul>
+<footer class="px-4">
+  <div class="2xl:container mx-auto my-4 flex flex-col sm:flex-row gap-4 sm:gap-8 sm:items-center text-gray-800 dark:text-gray-200">
+    <div class="flex-1 sm:text-right">
+      <h2 class="font-headings text-2xl font-thin italic">{{ site.title | escape }}</h2>
+      <div class="space-y-1">
+        <p class="text-sm">{{ site.description | escape }}</p>
+        {% if site.address %}
+        <address class="not-italic text-xs">{{ site.address | newline_to_br }}</address>
+        {% endif %}
       </div>
     </div>
+    <ul class="flex-1 font-sans font-extralight space-y-2 text-xs">
+      {% if site.email %}
+      <li>
+        <a class="inline-block border border-gray-200 dark:border-gray-800 rounded transition hover:border-current p-1 px-2 font-medium" href="mailto:{{ site.email }}">
+          <address class="inline not-italic">Email</address>
+        </a>
+      </li>
+      {% endif %}
+      {% if site.github %}
+      <li>
+        <a class="inline-block border border-gray-200 dark:border-gray-800 rounded transition hover:border-current p-1 px-2 font-medium" href="{{ site.github.owner_url }}">GitHub</a>
+      </li>
+      {% endif %}
+      {% if site.twitter_username %}
+      <li>
+        <a class="inline-block border border-gray-200 dark:border-gray-800 rounded transition hover:border-current p-1 px-2 font-medium" href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
+      </li>
+      {% endif %}    
+    </ul>
   </div>
 </footer>

@@ -1,0 +1,8 @@
+<header class="px-4">
+  <div class="2xl:container mx-auto my-4 flex flex-wrap justify-between items-center gap-4 text-gray-800 dark:text-gray-200 relative">
+    {% if site.title and site.title != page.title %}
+    <a href="{{ '/' | absolute_url }}"><h2 class="font-headings text-2xl italic border border-gray-200 dark:border-gray-800 rounded transition hover:border-current p-2 px-3">{{ site.title }}</h2></a>
+    {% endif %}    
+    {% include nav.html %}
+  </div>
+</header>

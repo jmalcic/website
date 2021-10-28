@@ -1,56 +1,33 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: Justin Malčić
-author: Justin Malčić
-email: malcic@umd.edu
-address: |
-  1417E Marie Mount Hall,
-  University of Maryland,
-  College Park MD 20742
-description: >- # this means to ignore newlines until "baseurl:"
-  Syntax and phonology
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://malcic.me" # the base hostname & protocol for your site, e.g. http://example.com
+email: justin@malcic.me
+address: |-
+  London, UK
+description: Trainee software engineer
+url: https://malcic.me
+baseurl: ""
 twitter_username: jmalcic
 github_username:  jmalcic
-
-# Build settings
-markdown: kramdown
-theme: jekyll-theme-primer
-plugins:
-  - jekyll-feed
-sass:
-  load_paths:
-    - _sass
-    - node_modules
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-
+collections:
+  projects:
+    output: true
+    title: Projects
+  posts:
+    output: true
+    title: Posts
 defaults:
   - scope:
-      path: "assets/images"
+      path: "_projects"
+      type: "projects"
     values:
-      image: true
+      layout: "project"
+  - scope:
+      path: "_projects/linguistics"
+    values:
+      category: linguistics
+  - scope:
+      path: "_projects/software"
+    values:
+      category: software
+plugins:
+  - jemoji
+  - jekyll-octicons
