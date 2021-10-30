@@ -18,7 +18,9 @@ jobs:
         with:
           node-version: '14'
       - name: Recompile
-        run: npx tailwindcss -i .tailwind/main.css -c .tailwind/config.js -o assets/css/main.css
+        run: |
+          npm install
+          npx tailwindcss -i .tailwind/main.css -c .tailwind/config.js -o assets/css/main.css
       - name: Commit any changes
         run: |
           if git status --porcelain=v2 | grep -q 'assets/css/main.css'
