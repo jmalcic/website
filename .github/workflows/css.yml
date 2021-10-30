@@ -8,6 +8,7 @@ on:
 
 jobs:
   compile:
+    name: Recompile CSS
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -16,11 +17,11 @@ jobs:
         uses: actions/setup-node@v2.4.1
         with:
           node-version: '14'
-      - name: Recompile CSS
+      - name: Recompile
         run: npx tailwindcss -i .tailwind/main.css -c .tailwind/config.js -o assets/css/main.css
       - name: Commit any changes
         run: |
-          if [ git status --porcelain=v2 | grep -q 'assets/css/main.css' ]
+          if git status --porcelain=v2 | grep -q 'assets/css/main.css'
           then
             git config user.name github-actions
             git config user.email github-actions@github.com
