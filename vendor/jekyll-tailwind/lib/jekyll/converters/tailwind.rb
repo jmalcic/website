@@ -20,7 +20,7 @@ module Jekyll
           file.write(content)
           spawn 'tailwindcss', *%W[-i #{file.path} -c .tailwind/config.js -o #{out_path(file.path)}]
           Process.wait
-          out = IO.read(out_path(file.path))
+          out = File.read(out_path(file.path))
         end
         out
       end
