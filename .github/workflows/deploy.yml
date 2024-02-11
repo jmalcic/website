@@ -1,3 +1,5 @@
+name: Deploy site
+
 on:
   push:
     branches: [main]
@@ -9,10 +11,10 @@ permissions:
 
 jobs:
   build:
-    name: Build site
+    name: Build
     uses: jmalcic/website/.github/workflows/build.yml@main
   deploy:
-    name: Deploy site
+    name: Deploy
     environment:
       name: github-pages
       url: ${{steps.deployment.outputs.page_url}}

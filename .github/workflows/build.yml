@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   build:
-    name: Build site
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
