@@ -9,4 +9,5 @@ Gem::Specification.new do |s|
   s.email = "justin@malcic.codes"
   s.files = ["lib/jekyll-tailwind.rb"]
   s.license = 'MIT'
+  s.add_dependency 'tailwindcss-ruby', '< 4'
 end

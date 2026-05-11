@@ -1,4 +1,5 @@
 require 'tempfile'
+require 'tailwindcss/ruby'
 
 module Jekyll
   module Converters
@@ -18,7 +19,7 @@ module Jekyll
         out = ""
         Tempfile.create do |file|
           file.write(content)
-          spawn 'tailwindcss', *%W[-i #{file.path} -c .tailwind/config.js -o #{out_path(file.path)}]
+          spawn *::Tailwindcss::Ruby.executable, *%W[-i #{file.path} -c .tailwind/config.js -o #{out_path(file.path)}]
           Process.wait
           out = File.read(out_path(file.path))
         end

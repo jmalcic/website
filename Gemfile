@@ -10,5 +10,6 @@ group :jekyll_plugins do
 end
 
 gem 'webrick'
-gem 'faraday-retry'
-gem 'github-pages'
+gem 'github-pages', '>= 232'
+gem 'csv'
+gem 'bigdecimal'
