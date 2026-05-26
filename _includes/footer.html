@@ -12,19 +12,27 @@
     <ul class="flex-1 font-sans font-extralight space-y-2 text-xs">
       {% if site.email %}
       <li>
-        <a class="inline-block border border-gray-200 dark:border-gray-800 rounded transition hover:border-current p-1 px-2 font-medium" href="mailto:{{ site.email }}">
+        <a class="inline-block border border-gray-200 dark:border-gray-800 rounded transition hover:border-current p-1 px-2
+                  font-medium"
+           href="mailto:{{ site.email }}">
           <address class="inline not-italic">Email</address>
         </a>
       </li>
       {% endif %}
       {% if site.github %}
       <li>
-        <a class="inline-block border border-gray-200 dark:border-gray-800 rounded transition hover:border-current p-1 px-2 font-medium" href="{{ site.github.owner_url }}">GitHub</a>
+        <a class="inline-block border border-gray-200 dark:border-gray-800 rounded transition hover:border-current p-1 px-2 font-medium"
+           href="{{ site.github.owner_url }}">
+          GitHub
+        </a>
       </li>
       {% endif %}
       {% if site.twitter_username %}
       <li>
-        <a class="inline-block border border-gray-200 dark:border-gray-800 rounded transition hover:border-current p-1 px-2 font-medium" href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
+        <a class="inline-block border border-gray-200 dark:border-gray-800 rounded transition hover:border-current p-1 px-2 font-medium"
+           href="https://twitter.com/{{ site.twitter_username }}">
+          Twitter
+        </a>
       </li>
       {% endif %}    
     </ul>

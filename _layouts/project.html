@@ -8,14 +8,19 @@ layout: default
       <div class="flex md:flex-col gap-2 w-max md:items-end">
         {% if page.files.size > 0 %}
         <details class="select-none">
-          <summary class="font-sans border border-white p-2 px-3 rounded hover:bg-white dark:hover:text-red-900 hover:text-red-700 transition cursor-default group focus:outline-none focus:ring ring-white ring-opacity-40">
+          <summary class="font-sans border border-white p-2 px-3 rounded hover:bg-white dark:hover:text-red-900 hover:text-red-700
+                          transition cursor-default group focus:outline-none focus:ring ring-white ring-opacity-40">
             Downloads
-            <span class="bg-white text-red-700 dark:text-red-900 rounded-full p-0.5 px-2 font-sans text-xs group-hover:bg-red-700 dark:group-hover:bg-red-900 group-hover:text-white transition">{{ page.files | size }}</span>
+            <span class="bg-white text-red-700 dark:text-red-900 rounded-full p-0.5 px-2 font-sans text-xs group-hover:bg-red-700
+                         dark:group-hover:bg-red-900 group-hover:text-white transition">
+              {{ page.files | size }}
+            </span>
           </summary>
           <ul class="absolute divide-y overflow-hidden shadow mt-2 rounded md:right-0 z-10">
             {% for file in page.files %}
               <li class="bg-white text-black dark:bg-black dark:text-white">
-                <a class="p-3 block hover:bg-gray-50 dark:hover:bg-gray-900 transition space-x-1" href="{{ page.id }}/{{ file.date }}/{{ file.type | slugify: 'latin' }}.pdf">
+                <a class="p-3 block hover:bg-gray-50 dark:hover:bg-gray-900 transition space-x-1"
+                   href="{{ page.id }}/{{ file.date }}/{{ file.type | slugify: 'latin' }}.pdf">
                   <span class="inline-block text-xs p-0.5 px-2 border rounded-full font-sans transition">{{ file.type }}</span>
                   <time datetime="{{ file.date }}">{{ file.date | date_to_long_string: 'ordinal' }}</time>
                   <address class="inline">{{ file.address }}</address>
@@ -27,9 +32,13 @@ layout: default
         {% endif %}
         {% if page.links.size > 0 %}
         <details class="select-none">
-          <summary class="font-sans border border-white p-2 px-3 rounded hover:bg-white dark:hover:text-red-900 hover:text-red-700 transition cursor-default group focus:outline-none focus:ring ring-white ring-opacity-40">
+          <summary class="font-sans border border-white p-2 px-3 rounded hover:bg-white dark:hover:text-red-900 hover:text-red-700
+                          transition cursor-default group focus:outline-none focus:ring ring-white ring-opacity-40">
             Links
-            <span class="bg-white text-red-700 dark:text-red-900 rounded-full p-0.5 px-2 font-sans text-xs group-hover:bg-red-700 dark:group-hover:bg-red-900 group-hover:text-white transition">{{ page.links | size }}</span>
+            <span class="bg-white text-red-700 dark:text-red-900 rounded-full p-0.5 px-2 font-sans text-xs group-hover:bg-red-700
+                         dark:group-hover:bg-red-900 group-hover:text-white transition">
+              {{ page.links | size }}
+            </span>
           </summary>
           <ul class="absolute divide-y overflow-hidden shadow mt-2 rounded md:right-0">
             {% for link in page.links %}
