@@ -10,4 +10,4 @@ but have also done various other things over the past ten years or so. My langua
 Rust and JS among others. I used to be a formal linguist, and that still guides the way I think about problems.
 
 Outside of work I'm typically cooking and baking, travelling Europe, watching arthouse cinema, or listening to obscure indie bands.
-If you see me at a conference (see left), come say hi!
+If you see me at a conference (see photo), come say hi!
