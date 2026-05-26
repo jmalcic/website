@@ -18,11 +18,27 @@ author of Minitest, and you should totally watch his talk to understand why this
 more coverage modes (e.g. branch coverage, very useful). This gem takes a different approach to the problem, which also
 avoids needing any changes to the coverage API.
 
-The premise is straightforward: where $c_0$ is the coverage after first loading a file (before running any tests),
-$c_1$ is the coverage just before running tests _for that file in particular_,
-and $c_2$ is the coverage after running the last test for that file,
-coverage for that file can be expressed as:
-$$c_0 + (c_2 - c_1)$$
-This gem just implements addition and subtraction for the different kinds of coverage in coverage results,
-plus a basic formatter so you can see the results.
-It works with parallel testing, and isn't thread-safe because coverage can't be run per-thread anyway.
+<p>
+  The premise is straightforward: where 
+  <math><msub><mi>c</mi><mn>0</mn></msub></math> 
+  is the coverage after first loading a file (before running any tests), 
+  <math><msub><mi>c</mi><mn>1</mn></msub></math> 
+  is the coverage just before running tests <em>for that file in particular</em>, and
+  <math><msub><mi>c</mi><mn>2</mn></msub></math>
+  is the coverage after running the last test for that file,
+  coverage for that file can be expressed as:
+  <math>
+    <mrow>
+      <msub><mi>c</mi><mn>0</mn></msub>
+      <mo>+</mo>
+      <mo>(</mo>
+      <msub><mi>c</mi><mn>2</mn></msub>
+      <mo>−</mo>
+      <msub><mi>c</mi><mn>1</mn></msub>
+      <mo>)</mo>
+    </mrow>
+  </math>
+  This gem just implements addition and subtraction for the different kinds of coverage in coverage results,
+  plus a basic formatter so you can see the results.
+  It works with parallel testing, and isn't thread-safe because coverage can't be run per-thread anyway.
+</p>
