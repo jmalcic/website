@@ -1,5 +1,5 @@
 ---
-title: RCharts
+title: Venetian
 links:
   - url: https://github.com/jmalcic/venetian
     type: GitHub repo
