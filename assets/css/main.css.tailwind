@@ -504,4 +504,8 @@
   summary.list-style-none::-webkit-details-marker {
     @apply hidden;
   }
+
+  p a {
+    @apply underline decoration-dotted hover:decoration-solid active:decoration-solid focus-within:decoration-solid;
+  }
 }
