@@ -2,7 +2,7 @@ PATH
   remote: vendor/jekyll-tailwind
   specs:
     jekyll-tailwind (0.0.1)
-      tailwindcss-ruby (< 4)
+      tailwindcss-ruby (< 5)
 
 GEM
   remote: https://rubygems.org/
@@ -296,11 +296,13 @@ GEM
       faraday (>= 0.17.3, < 3)
     securerandom (0.4.1)
     simpleidn (0.2.3)
-    tailwindcss-ruby (3.4.19-aarch64-linux)
-    tailwindcss-ruby (3.4.19-arm-linux)
-    tailwindcss-ruby (3.4.19-arm64-darwin)
-    tailwindcss-ruby (3.4.19-x86_64-darwin)
-    tailwindcss-ruby (3.4.19-x86_64-linux)
+    tailwindcss-ruby (4.3.2)
+    tailwindcss-ruby (4.3.2-aarch64-linux-gnu)
+    tailwindcss-ruby (4.3.2-aarch64-linux-musl)
+    tailwindcss-ruby (4.3.2-arm64-darwin)
+    tailwindcss-ruby (4.3.2-x86_64-darwin)
+    tailwindcss-ruby (4.3.2-x86_64-linux-gnu)
+    tailwindcss-ruby (4.3.2-x86_64-linux-musl)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     typhoeus (1.6.0)
@@ -439,11 +441,13 @@ CHECKSUMS
   sawyer (0.9.3) sha256=0d0f19298408047037638639fe62f4794483fb04320269169bd41af2bdcf5e41
   securerandom (0.4.1) sha256=cc5193d414a4341b6e225f0cb4446aceca8e50d5e1888743fac16987638ea0b1
   simpleidn (0.2.3) sha256=08ce96f03fa1605286be22651ba0fc9c0b2d6272c9b27a260bc88be05b0d2c29
-  tailwindcss-ruby (3.4.19-aarch64-linux) sha256=8abdd5c9afa14b1ee337e37223170165becaa1ad7c4968457d3fc48cddd4e7c6
-  tailwindcss-ruby (3.4.19-arm-linux) sha256=94b0764763d80dc5a8fa52c21ea2e57b2fac9a578293886173e7776f55dab22a
-  tailwindcss-ruby (3.4.19-arm64-darwin) sha256=e636d4c34d1abfbd891f4e46669c259a87f434ac03046c9c58ca4eda704d4aa2
-  tailwindcss-ruby (3.4.19-x86_64-darwin) sha256=c751c5266fb1ad0e3d1495bd14b37c65ceaed3f189748016118adb51a3a11e0a
-  tailwindcss-ruby (3.4.19-x86_64-linux) sha256=9e312c34ec26813fc1917535be3816890e2304be7a320539c242d86d14e12c2a
+  tailwindcss-ruby (4.3.2) sha256=e7e583c13f13f645e353922de4a5295f724449576747911d3717f36c4c8a0c45
+  tailwindcss-ruby (4.3.2-aarch64-linux-gnu) sha256=c045c3ad10b19f5798fbe020e8419abc0c84fbbd12766998bd8cb108c786dc5c
+  tailwindcss-ruby (4.3.2-aarch64-linux-musl) sha256=f1c7e13f5c59b738ff737f8192d79624e2e7dd81fa23f71ae563f1831599af6e
+  tailwindcss-ruby (4.3.2-arm64-darwin) sha256=1467f1278d3ec9822d7c8569f6ca13b7b9de13eaa0ff8f1555bddae77672bd71
+  tailwindcss-ruby (4.3.2-x86_64-darwin) sha256=192f2f40adf21938c6b7d6fbd2be50d1f723fac7de0f3d0bace29f7c09b14b21
+  tailwindcss-ruby (4.3.2-x86_64-linux-gnu) sha256=47d30e115b518baccf81113e0ceef081df851a6feee457a24c06d7c1d4394183
+  tailwindcss-ruby (4.3.2-x86_64-linux-musl) sha256=3f5d630cca7a5e43e20d5ea77f71045cf2ecef9138571f146ea29495706c28bc
   terminal-table (1.8.0) sha256=13371f069af18e9baa4e44d404a4ada9301899ce0530c237ac1a96c19f652294
   typhoeus (1.6.0) sha256=bacc41c23e379547e29801dc235cd1699b70b955a1ba3d32b2b877aa844c331d
   tzinfo (2.0.6) sha256=8daf828cc77bcf7d63b0e3bdb6caa47e2272dcfaf4fbfe46f8c3a9df087a829b
