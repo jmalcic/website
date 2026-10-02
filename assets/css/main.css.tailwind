@@ -1,11 +1,26 @@
 ---
 ---
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "SangBleu Sunrise", Palatino, Times, serif;
+  --font-serif: "SangBleu Republic", Palatino, Times, serif;
+  --font-headings: "SangBleu Kingdom", Palatino, Times, serif;
+  --font-display: "SangBleu Empire", Palatino, Times, serif;
+  --font-small: "SangBleu Versailles", Palatino, Times, serif;
+}
 
 @layer base {
+  /* Tailwind 4 defaults borders to currentColor; keep the v3 default */
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
   @font-face {
       font-family: "SangBleu Empire";
       src: url("/assets/fonts/SangBleuEmpire-Black.eot") format("embedded-opentype"),
