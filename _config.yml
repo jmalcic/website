@@ -7,6 +7,7 @@ url: https://malcic.codes
 baseurl: ""
 twitter_username: jmalcic
 github_username:  jmalcic
+repository: jmalcic/website
 collections:
   projects:
     output: true
@@ -25,5 +26,6 @@ defaults:
     values:
       category: software
 plugins:
+  - jekyll-github-metadata
   - jemoji
   - jekyll-octicons
